@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+  </head>
+  <body>
+    <div class="cta">
+      <div class="txtbtn">
+        <span id="needtxt">Need Help Right Away?</span>
+        <span id="gethelptxt"
+          >If you are in danger, please get help now. Don't wait!</span
+        >
+        <button id="goldbtn">Get Help Now!</button>
+      </div>
+      <div class="profilesec">
+        <i class="bx bx-user-circle"></i>
+        <p>Guest</p>
+        <p>|</p>
+        <i class="bx bx-globe"></i>
+        <p>English</p>
+        <i class="bx bx-chevron-down"></i>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="{% static 'GBVLogo.png' %}" class="logoimg" />
+      <div class="thecontent">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">Report Incident</a></li>
+          <li><a href="#services">Support Services</a></li>
+          <li><a href="#contact">About Us</a></li>
+        </ul>
+      </div>
+      <div class="hidecont">
+        <button class="hidebtn"><b>Hide Screen</b></button>
+        <i class="bx bx-low-vision"></i>
+      </div>
+    </div>
+
+    
+    <div class="bannersect">
+        <img src="{% static 'banner.png' %}" />
+        <p class="mainxt">Share Your Story. Find Support.</p>
+        <p class="subtext">You’re not alone. Our community is here to listen, support, and help you heal. Share your experience anonymously and connect with others who understand. Together, we can break the silence and build strength.</p>
+        <button><b>Join The Community</b></button>
+    </div>
+
+
+    <footer class="dfooter">
+        <ul>
+            <li>INFORMATION SECURITY</li>
+            <li>PRIVACY POLICY</li>
+            <li>DONATE</li>
+            <li>TERMS</li>
+        </ul>
+        <img src="{% static 'GBVLogo.png' %}" class="logoimg" />
+    </footer>
+  </body>
+</html>
