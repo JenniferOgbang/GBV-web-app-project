@@ -1,0 +1,44 @@
+Here's the updated PR description including instructions for viewing the website through `requirements.txt`:
+
+---
+
+# Pull Request: Update Home Page and Project Structure
+
+## Changes Made:
+- **Updated HTML Code**: Improved the `index.html` for better layout and user experience.
+- **Added Comments**: Included clear comments in the code to help understand the structure and function of each section.
+- **Created `requirements.txt`**: Added this file to list the project dependencies necessary for running the website.
+
+## How to Run the Project:
+To view the website on your local machine, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+
+2. **Install Dependencies**:
+   Make sure you have Python and pip installed. Then run:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Server**:
+   Start the server by running:
+   ```bash
+   python manage.py runserver
+   ```
+   (Make sure you have the necessary framework set up, like Django or Flask.)
+
+4. **Open in Browser**:
+   Go to `http://127.0.0.1:8000` in your web browser to view the website.
+
+5. **Accessing Through `requirements.txt`**:
+   The `requirements.txt` file contains all the libraries needed to run the project. After installing the dependencies, you can ensure everything is set up correctly. If you encounter any issues, please check the file for any missing packages.
+
+Feel free to check out the changes and let me know if you have any questions!
+
+---
+
+Make sure to replace `<repository-url>` and `<repository-folder>` with your actual repository details. Let me know if you need any more adjustments!
