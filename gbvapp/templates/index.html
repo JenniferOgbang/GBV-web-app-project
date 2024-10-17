@@ -1,10 +1,11 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>Home Page</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -12,57 +13,161 @@
     <link rel="stylesheet" href="{% static 'index.css' %}" />
   </head>
   <body>
-    <div class="cta">
-      <div class="txtbtn">
-        <span id="needtxt">Need Help Right Away?</span>
-        <span id="gethelptxt"
-          >If you are in danger, please get help now. Don't wait!</span
-        >
-        <button id="goldbtn">Get Help Now!</button>
-      </div>
-      <div class="profilesec">
-        <i class="bx bx-user-circle"></i>
-        <p>Guest</p>
-        <p>|</p>
-        <i class="bx bx-globe"></i>
-        <p>English</p>
-        <i class="bx bx-chevron-down"></i>
-      </div>
-    </div>
+<!-- Call to Action: Immediate help section -->
+{% include 'cta.html' %}
 
-    <div class="container">
-      <img src="{% static 'GBVLogo.png' %}" class="logoimg" />
-      <div class="thecontent">
-        <ul>
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">Report Incident</a></li>
-          <li><a href="#services">Support Services</a></li>
-          <li><a href="#contact">About Us</a></li>
-        </ul>
-      </div>
-      <div class="hidecont">
-        <button class="hidebtn"><b>Hide Screen</b></button>
-        <i class="bx bx-low-vision"></i>
-      </div>
-    </div>
+<!-- Navigation Bar: Contains logo and menu items -->
+{% include 'nav.html' %}
 
+    <!-- Main Banner: Encouragement to share experiences -->
+    <section class="bannersect">
+      <img src="{% static 'banner.png' %}" alt="banner"/>
+      <p class="mainxt">Share Your Story. Find Support.</p>
+      <p class="subtext">
+        You’re not alone. Our community is here to listen, support, and help you
+        heal. Share your experience anonymously and connect with others who
+        understand. Together, we can break the silence and build strength.
+      </p>
+      <button><b>Join The Community</b></button>
+    </section>
+
+    <!-- Impact Section: Invite users to get involved -->
+
+    <section class="makeanimapct">
+      <p id="dmaintxt">Make an Impact: Join Us in Supporting Survivors and Volunteering</p>
+      <p id="dsubtxt">Together, we can create change. Support survivors or join our programs—your involvement makes a difference for those affected by GBV</p>
+      <div class="threegrid">
+        <div class="gridone">
+           <p><b>Join Our Support Network</b></p>
+          <p>Help survivors by sharing your skills. Check out our support programs to get involved and strengthen our community.</p>
+          <div class="txtandlink">
+             <p>Join Programs</p>
+             <i class='bx bx-right-arrow-alt'></i>
+          </div>
+        </div>
+        <div class="gridtwo">
+           <p><b>Support Survivors: Donate Today</b></p>
+          <p>Your donation helps provide vital resources and support. Join us in creating a stronger community.</p>
+          <div class="txtandlink">
+            <p>Donate</p>
+            <i class='bx bx-right-arrow-alt'></i>
+          </div>
+        </div>
+        <div class="gridthree">
+          <!-- Use a background image for the div -->
+           <p><b>Upcoming Programs</b></p>
+          <p class="gridthreesubtxt">Join Our Awareness Workshop!
+            Be part of our impactful Awareness Workshop! Gain valuable insights into gender-based violence (GBV) and learn how you can make a difference in your community. 
+            Together, we can raise awareness and create a safer environment for everyone.</p>
+          <div class="txtandlink">
+            <p>Register Now</p>
+            <i class='bx bx-right-arrow-alt'></i>
+          </div>
+          <div class="zoomsection">
+            <div class="zoom-info">
+              <div class="location">
+                <i class='bx bxs-map'></i>
+                <p>Zoom link will be provided upon registration</p>
+              </div>
+              <div class="datetime">
+                <i class='bx bx-time-five'></i>
+                <p>4:00pm - 5:30pm WAT</p>
+              </div>
+            </div>
+            <div class="navigation-arrows">
+              <i class='bx bxs-right-arrow-circle bx-flip-horizontal' style='color:#28475d'></i>
+              <i class='bx bxs-right-arrow-circle bx-flip-vertical' style='color:#28475d'></i>
+            </div>
+          </div>
+          
+      </div>
+    </section>
+
+    <!-- Help Section: Resources for getting support -->
+
+    <section class="gethelp">
+      <p>Get Help & Access Support Resources</p>
+      <div class="grid-container">
+        <div class="grid-item row1">
+          <img src="{% static 'woman.png' %}" alt="a woman"/>
+          <p>Get emotional and mental support from professionals who understand your needs.</p>
+          <div class="txtandlink2">
+            <p>Connect with a Counselor</p>
+            <i class='bx bx-right-arrow-alt'></i>
+          </div>
+        </div>
+        <div class="grid-item row2">
+          <img src="{% static 'judgment.png' %}" alt="court img"/>
+          <p>Access legal guidance to protect your rights and navigate the justice system.</p>
+          <div class="txtandlink2">
+            <p>Get Legal Help</p>
+            <i class='bx bx-right-arrow-alt'></i>
+          </div>
+        </div>
+        <div class="grid-item row3">
+          <img src="{% static 'wordcloud.png' %}" alt="word cloud img" />
+          <p>Find safe spaces where you can stay protected and receive immediate care.</p>
+          <div class="txtandlink2">
+            <p>Locate a Shelter</p>
+            <i class='bx bx-right-arrow-alt'></i>
+          </div>
+        </div>
+        <div class="grid-item row4">
+          <img src="{% static 'woman.png' %}" alt="a woman img"/>
+          <p>Get help with financial assistance to support your safety and well-being.</p>
+          <div class="txtandlink2">
+            <p>Apply for Aid</p>
+            <i class='bx bx-right-arrow-alt'></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section: Featuring a related YouTube video -->
     
-    <div class="bannersect">
-        <img src="{% static 'banner.png' %}" />
-        <p class="mainxt">Share Your Story. Find Support.</p>
-        <p class="subtext">You’re not alone. Our community is here to listen, support, and help you heal. Share your experience anonymously and connect with others who understand. Together, we can break the silence and build strength.</p>
-        <button><b>Join The Community</b></button>
+
+<section class="youtubevideo">
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/QTB1YiWxxKU?si=lq0JgBIfd4LFupbQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+</section>
+
+<!-- Testimonials Section: Real stories from users -->
+
+<section class="testimonysection">
+
+   <p id="testmaintt">Real Stories, Real Impact</p>
+    <p id="testsubtxt">Hear from survivors and advocates whose lives have been changed through the support and resources provided by our platform. Your voice matters, and together, we can make a difference.</p>
+    <div class="gridrowcontainer">
+      <div class="drows drows1">
+        <p class="testimonial1">Testimonial 1</p>
+        <p class="dtestimony">Using this app was a turning point for me. I felt safe reporting my experience anonymously, and the resources provided were incredibly helpful. Knowing I wasn’t alone made all the difference</p>
+        <p class="dtestifier">— Sarah, Survivor</p>
+      </div>
+
+      <div class="drows drows2">
+        <p class="testimonial1">Testimonial 2</p>
+        <p class="dtestimony">I never thought I would reach out for help, but this app made it easy and safe. The support and guidance I received were invaluable, and it empowered me to take action. Thank you for creating this resource!</p>
+        <p class="dtestifier">— James, Advocate</p>
+      </div>
+
+
+      <div class="drows drows3">
+        <p class="testimonial1">Testimonial 3</p>
+        <p class="dtestimony">This app is a beacon of hope for many. It allowed me to share my story without fear of exposure. The community resources connected me with local services that changed my life. Highly recommend!</p>
+        <p class="dtestifier">— Fatima, User</p>
+      </div>
+
+
+      <div class="drows drows4">
+        <p class="testimonial1">Testimonial 4</p>
+        <p class="dtestimony">I appreciate how user-friendly and discreet this app is. It made reporting a traumatic experience less intimidating. The emphasis on anonymity gave me the confidence to seek help.</p>
+        <p class="dtestifier">— Chinonso, User</p>
+      </div>
     </div>
-
-
-    <footer class="dfooter">
-        <ul>
-            <li>INFORMATION SECURITY</li>
-            <li>PRIVACY POLICY</li>
-            <li>DONATE</li>
-            <li>TERMS</li>
-        </ul>
-        <img src="{% static 'GBVLogo.png' %}" class="logoimg" />
-    </footer>
+</section>
+<!-- Footer Section: Links for more information -->
+{% include 'footer.html' %}
   </body>
 </html>
